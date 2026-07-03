@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OptiCrop AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <h1>🌱 OptiCrop AI</h1>
+
+        <p class="tagline">
+            Smart Agricultural Production Optimization Engine
+        </p>
+
+        <p class="description">
+            Predict the most suitable crop using Machine Learning
+            and soil nutrient analysis.
+        </p>
+
+    </div>
+
+</header>
+
+<main class="container">
+
+<section class="card">
+
+<h2>🌾 Crop Recommendation</h2>
+
+<form action="/predict" method="POST">
+
+<div class="grid">
+
+<div class="input-group">
+
+<label>Nitrogen (N)</label>
+
+<input
+type="number"
+name="N"
+placeholder="Enter Nitrogen"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>Phosphorus (P)</label>
+
+<input
+type="number"
+name="P"
+placeholder="Enter Phosphorus"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>Potassium (K)</label>
+
+<input
+type="number"
+name="K"
+placeholder="Enter Potassium"
+required>
+
+</div>
+<div class="input-group">
+
+    <label>Temperature (°C)</label>
+
+    <input
+        type="number"
+        step="0.01"
+        name="temperature"
+        placeholder="Enter Temperature"
+        required>
+
+</div>
+
+<div class="input-group">
+
+    <label>Humidity (%)</label>
+
+    <input
+        type="number"
+        step="0.01"
+        name="humidity"
+        placeholder="Enter Humidity"
+        required>
+
+</div>
+
+<div class="input-group">
+
+    <label>pH Value</label>
+
+    <input
+        type="number"
+        step="0.01"
+        name="ph"
+        placeholder="Enter Soil pH"
+        required>
+
+</div>
+
+<div class="input-group">
+
+    <label>Rainfall (mm)</label>
+
+    <input
+        type="number"
+        step="0.01"
+        name="rainfall"
+        placeholder="Enter Rainfall"
+        required>
+
+</div>
+
+</div>
+
+<div class="button-container">
+
+    <button class="predict-btn" type="submit">
+
+        🌾 Predict Crop
+
+    </button>
+
+</div>
+
+</form>
+
+</section>
+<!-- ========================= -->
+<!-- AI MODEL STATUS -->
+<!-- ========================= -->
+
+<section class="card status-card">
+
+    <h2>🤖 AI Model Status</h2>
+
+    <div class="status-grid">
+
+        <div class="status-box">
+
+            <h3>Model</h3>
+
+            <p>Random Forest</p>
+
+        </div>
+
+        <div class="status-box">
+
+            <h3>Accuracy</h3>
+
+            <p>99.31%</p>
+
+        </div>
+
+        <div class="status-box">
+
+            <h3>Dataset</h3>
+
+            <p>2200 Records</p>
+
+        </div>
+
+        <div class="status-box">
+
+            <h3>Features</h3>
+
+            <p>7 Parameters</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- PREDICTION RESULT -->
+<!-- ========================= -->
+
+{% if prediction_text %}
+
+<section class="card result-card">
+
+    <h2>🌾 Recommendation Result</h2>
+
+    <div class="prediction-box">
+
+        <h1>{{ prediction_text }}</h1>
+
+    </div>
+
+    <div class="prediction-details">
+
+        <div>
+
+            <strong>Algorithm</strong>
+
+            <p>Random Forest Classifier</p>
+
+        </div>
+
+        <div>
+
+            <strong>Prediction Type</strong>
+
+            <p>Multi-Class Classification</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endif %}
+<!-- ========================= -->
+<!-- FUTURE AI FEATURES -->
+<!-- ========================= -->
+
+<section class="card future-card">
+
+    <h2>🚀 Future AI Enhancements</h2>
+
+    <div class="future-grid">
+
+        <div class="future-item">
+            <span>🧠</span>
+            <h3>SHAP Explainability</h3>
+            <p>Understand why the AI recommended a crop.</p>
+        </div>
+
+        <div class="future-item">
+            <span>📊</span>
+            <h3>Model Comparison</h3>
+            <p>Compare Random Forest, XGBoost, SVM and more.</p>
+        </div>
+
+        <div class="future-item">
+            <span>⚙️</span>
+            <h3>Hyperparameter Tuning</h3>
+            <p>Automatically optimize model performance.</p>
+        </div>
+
+        <div class="future-item">
+            <span>🌦️</span>
+            <h3>Weather API</h3>
+            <p>Use live weather conditions for prediction.</p>
+        </div>
+
+        <div class="future-item">
+            <span>🎯</span>
+            <h3>Confidence Score</h3>
+            <p>Display how confident the model is.</p>
+        </div>
+
+        <div class="future-item">
+            <span>🔬</span>
+            <h3>What-If Simulator</h3>
+            <p>See how changing soil values affects prediction.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- TECHNOLOGY STACK -->
+<!-- ========================= -->
+
+<section class="card tech-card">
+
+    <h2>🛠 Technology Stack</h2>
+
+    <div class="tech-grid">
+
+        <div class="tech">🐍 Python</div>
+
+        <div class="tech">🌐 Flask</div>
+
+        <div class="tech">🤖 Scikit-Learn</div>
+
+        <div class="tech">🌲 Random Forest</div>
+
+        <div class="tech">📊 Pandas</div>
+
+        <div class="tech">🔢 NumPy</div>
+
+        <div class="tech">📈 Matplotlib</div>
+
+        <div class="tech">🎨 HTML • CSS • JavaScript</div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>🌱 OptiCrop AI</h2>
+
+        <p>
+            Smart Agricultural Production Optimization Engine
+        </p>
+
+        <p>
+            Built with ❤️ using Machine Learning & Flask
+        </p>
+
+        <small>
+            Version 1.0 | Random Forest Crop Recommendation System
+        </small>
+
+    </div>
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>

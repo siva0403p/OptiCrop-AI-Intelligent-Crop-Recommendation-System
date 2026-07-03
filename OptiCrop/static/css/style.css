@@ -1,0 +1,386 @@
+/* =====================================
+   OPTICROP AI
+   Global Theme
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Segoe UI",sans-serif;
+
+    background:#f5f9f6;
+
+    color:#1f2d1f;
+
+    min-height:100vh;
+
+}
+
+/* =====================================
+   Hero Section
+===================================== */
+
+.hero{
+
+    background:linear-gradient(135deg,#1b5e20,#2e7d32,#43a047);
+
+    color:white;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.18);
+
+}
+
+.hero h1{
+
+    font-size:3rem;
+
+    margin-bottom:15px;
+
+}
+
+.tagline{
+
+    font-size:1.2rem;
+
+    opacity:.95;
+
+    margin-bottom:10px;
+
+}
+
+.description{
+
+    max-width:700px;
+
+    margin:auto;
+
+    opacity:.85;
+
+    line-height:1.8;
+
+}
+/* =====================================
+   Main Layout
+===================================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.card h2{
+
+    color:#2e7d32;
+
+    margin-bottom:25px;
+
+}
+/* =====================================
+   Input Form
+===================================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:22px;
+
+}
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.input-group label{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.input-group input{
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:2px solid #d8e6d8;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.input-group input:focus{
+
+    border-color:#2e7d32;
+
+    outline:none;
+
+    box-shadow:0 0 15px rgba(46,125,50,.2);
+
+}
+.button-container{
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+.predict-btn{
+
+    background:#2e7d32;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 40px;
+
+    font-size:18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.predict-btn:hover{
+
+    background:#1b5e20;
+
+    transform:translateY(-3px);
+
+}
+.status-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:20px;
+
+}
+
+.status-box{
+
+    background:#eef7ef;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+}
+
+.status-box h3{
+
+    color:#2e7d32;
+
+}
+
+.status-box p{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+.prediction-box{
+
+    background:#2e7d32;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    margin:25px 0;
+
+}
+
+.prediction-box h1{
+
+    font-size:2.7rem;
+
+}
+
+.prediction-details{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+.future-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.future-item{
+
+    background:#f7fbf7;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+}
+
+.future-item:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.future-item span{
+
+    font-size:40px;
+
+}
+
+.future-item h3{
+
+    margin:15px 0;
+
+}
+.tech-grid{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.tech{
+
+    background:#2e7d32;
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+}
+footer{
+
+    background:#1b5e20;
+
+    color:white;
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+footer h2{
+
+    margin-bottom:10px;
+
+}
+
+footer p{
+
+    margin:6px 0;
+
+    opacity:.9;
+
+}
+@media(max-width:768px){
+
+.hero h1{
+
+    font-size:2.2rem;
+
+}
+
+.card{
+
+    padding:20px;
+
+}
+
+.prediction-box h1{
+
+    font-size:2rem;
+
+}
+
+}
+
