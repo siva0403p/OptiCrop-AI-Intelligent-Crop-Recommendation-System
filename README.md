@@ -5,6 +5,8 @@ An Intelligent Machine Learning-Based Crop Recommendation System for Precision A
 
 OptiCrop is an AI and Machine Learning-based web application that predicts the most suitable crop based on soil and environmental conditions. The system uses a Random Forest classification model to provide accurate crop recommendations and fertilizer suggestions, helping farmers make informed agricultural decisions.
 
+DEMO-VIDEO : https://drive.google.com/file/d/1JR5IyYSJQnpE4yKCnyIgAwUPf0ny_Jw8/view?t=8.984
+
 ---
 
 ## Repository Structure
